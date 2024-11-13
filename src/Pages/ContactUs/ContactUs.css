@@ -1,0 +1,154 @@
+/* ContactUs.css */
+
+#contactusPage {
+    width: 100vw; /* Corrected from 100dvw to 100vw */
+    height: 100vh; /* Corrected from 100dvh to 100vh */
+    position: relative;
+  
+}
+
+.CUTitle {
+    position: absolute;
+    top: 10%;
+}
+
+.CUTitle p:nth-child(1) {
+    font-size: 250%;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.CUTitle p:nth-child(2) {
+    font-size: 150%;
+    text-align: center;
+    font-weight: 350;
+}
+
+#contactusPage .cards {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    display: flex; /* Flex layout for cards */
+    justify-content: space-around; /* Space around for alignment */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Card styles */
+#contactusPage .card {
+    width: 20vw; /* Card width for larger screens */
+    height: 30vh; /* Card height for larger screens */
+    margin: 0 30px;
+    border-radius: 20px;
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+
+
+#contactusPage .card .card-body .icon #locIcon {
+    width: 4vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#contactusPage .card .card-body .head {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#contactusPage .card .card-body .body {
+    font-size: 98%;
+    font-weight: 350;
+    text-align: center;
+}
+
+/* Map styles */
+.map {
+    position: absolute;
+    bottom: 10%;
+    left: 18%;
+}
+
+.map #myMap {
+    width: 65vw; /* Map width for larger screens */
+    height: auto;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #36454F;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .CUTitle p:nth-child(1) {
+        font-size: 150%; /* Adjust title font size */
+        text-align: center; /* Center text within the container */
+        margin-left: -500px;
+    }
+
+    .CUTitle p:nth-child(2) {
+        font-size: 100%; /* Adjust subtitle font size */
+        margin-left: -500px;
+    }
+
+    #contactusPage {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack title and subtitle vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Add padding for better spacing */
+       
+    }
+
+    #contactusPage .cards {
+        display: flex; /* Ensure cards are a flex container */
+        flex-direction: row; /* Arrange cards horizontally */
+        align-items: flex-start; /* Align cards to the top */
+        justify-content: center; /* Center cards within the container */
+        width: 100%; /* Use full width for cards */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        margin: 0 auto; /* Center cards */
+        margin-left: -16%;
+        font-size:medium;
+    
+    } 
+
+    #contactusPage .card {
+        width: auto; /* Set width to auto for horizontal layout */
+        height: 300px; /* Adjust height to auto */
+        margin: 1px; /* Margin for spacing around each card */
+        flex: 1; /* Allow cards to grow and fill available space */
+        max-width: 400px; /* Optional: set a max width for each card */
+     
+
+    }
+
+
+    .map {
+        position: absolute;
+        bottom: 10%; /* Adjust bottom position for map */
+        left: 1%; /* Adjust left position for map */
+        right: 5%; /* Adjust right position for map */
+    }
+
+    .map #myMap {
+        width: 100%; /* Full width for map on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .footer {
+        justify-content: end;
+        padding: 10px 0; /* Add padding for better spacing */
+      
+    }
+}

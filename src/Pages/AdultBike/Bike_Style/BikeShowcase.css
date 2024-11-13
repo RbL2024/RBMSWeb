@@ -1,0 +1,96 @@
+.bike-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1000px; /* Keep this or adjust as needed */
+    margin: 0 auto;
+    transition: opacity 0.5s ease-in-out;
+   
+    
+}
+
+.bike-showcase img {
+    width: 45%; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    filter: drop-shadow(0 15px 1px rgba(2, 10, 4, 0.5)); /* Shadow effect */
+    transform: none; /* Reset any transform effects */
+    transition: none; /* Remove transitions */
+}
+
+.bike-info {
+    width: 41%; /* Adjusted width for bike info */
+    text-align: left;
+    margin-left: 10px; /* Ensure this has a unit (px) */
+}
+
+.bike-info h1 {
+    font-size: 25px; /* Font size for bike name */
+    text-align: center;
+    margin: 0;
+    ;
+}
+
+.bike-info h2 {
+    font-size:20px;
+    color: gray; /* Color for the subheading */
+  
+}
+
+.bike-info p {
+    margin-top: 20px; /* Space above the paragraph */
+    line-height: 1.5; /* Line height for better readability */
+    margin-left: 0px;
+    text-align: justify;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .bike-showcase {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row;
+        align-items: center; /* Center align items vertically */
+        padding: 5px; /* Adjust padding for smaller screens */
+        
+    }
+
+    .bike-showcase img,
+    .bike-info {
+        width: 50%; /* Width of the image */
+        margin-right: 10px; /* Add some space between image and bike info */
+        text-align: justify;
+     
+
+    }
+
+    .bike-info {
+        width: 50%; /* Ensure bike info takes full width of the remaining space */
+        max-width: 600px;
+        text-align: left; /* Align text to the left for bike info */
+        padding: 0; /* Remove padding */
+        margin-left: 5px; /* Added margin to separate from image */
+    
+    }
+    
+    .bike-info h1 {
+      
+        font-size: 1.2rem; /* Smaller heading size for mobile */
+     
+
+ 
+       
+    }
+
+    .bike-info h2 {
+        font-size: 1rem; /* Smaller subheading size for mobile */
+        margin-bottom: 8px; /* Space below subheading */
+        
+    }
+
+    .bike-info p {
+        margin: 5px 0; /* Adjusted vertical margin */
+        padding: 0 2px; /* Narrow padding for a cleaner look */
+        line-height: 1.4; /* Improved line height for readability */
+    }
+}

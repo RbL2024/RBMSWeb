@@ -1,0 +1,62 @@
+.bike-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: auto; /* Adjust height to better fit the content */
+  padding: 20px; /* Add padding around the carousel */
+  position: relative; /* Allow for arrow buttons to be positioned */
+  
+
+}
+
+.bike-carousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Add space between the bikes */
+  transition: transform 0.5s ease;
+  
+}
+
+.bike-image {
+  max-width: 250px;
+  height: 160px;
+  opacity: 0.5;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  margin: 0 10px; /* Add horizontal space between the images */
+  border-radius: 10px; /* Optional rounded corners */
+
+
+}
+
+.bike-image.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 60px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+ color: black;
+}

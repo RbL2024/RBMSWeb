@@ -1,0 +1,125 @@
+.bike-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent images from spilling out */
+}
+.bike-carousel-images {
+  display: flex;
+  overflow: hidden;
+  background-image: none;
+
+}
+
+
+.bike-image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Ensure the image fills the container */
+}
+
+.bike-label {
+  position: absolute;
+  top: 10px; /* Positions the label 10px from the top */
+  right: 10px; /* Positions the label 10px from the right */
+  background-color:#36454F;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for readability */
+  color: #B2BEB5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 1;
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 0.05rem; /* Slight spacing for readability */
+}
+
+.bike-image {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0.6;
+  border-radius: 8px; /* Rounded corners for a softer look */
+ 
+}
+
+.bike-image.scale-up {
+  transform: scale(1.1); /* Slightly scales up the image */
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  border-radius: 8px; /* Rounded corners for a softer look */
+ 
+}
+
+/* Optional: Adding hover effect for smoother interaction */
+.bike-image.scale-up:hover {
+  transform: scale(1.1) rotate(1deg); /* Additional scaling and rotation on hover */
+  cursor: pointer; /* Changes cursor to pointer */
+
+}
+
+/* Optional: Adding a focus effect for accessibility */
+.bike-image.scale-up:focus {
+ 
+  transform: scale(1.10) rotate(10deg);
+}
+
+.carousel-inner {
+  display: flex; /* Use flexbox to arrange items in a row */
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.carousel-item {
+  min-width: 100%; /* Each item takes full width of the carousel */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 10; /* Ensure controls are above other elements */
+  padding: 10px; /* Add some padding for click area */
+  transform: translateY(-50%);
+
+}
+
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .bike-carousel {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .bike-image-container {
+    width: auto; /* Allow width to adjust automatically */
+    margin-bottom: 10px; /* Space between images */
+    display:none; /* Hide the image container in mobile view */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    font-size: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index:1; /* Ensures buttons appear above other content */
+    display:none; /* Hide the image container in mobile view */
+   
+  
+  }
+
+  .carousel-control-prev {
+    left: 10px; /* Position the previous button to the left */
+  }
+
+  .carousel-control-next {
+    right: 10px; /* Position the next button to the right */
+  }
+}
