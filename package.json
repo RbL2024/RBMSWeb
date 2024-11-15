@@ -1,6 +1,6 @@
 {
-  "homepage": "http://jed-hmp.github.io/rbms-website",
-  "name": "rbms-website",
+  "homepage": "http://RbL2024.github.io/RBMSWeb",
+  "name": "rbmsweb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
