@@ -48,7 +48,7 @@ export default function AboutUs() {
             <div className="mission-body">
               We strive to deliver a seamless bike rental experience by
               leveraging cutting-edge technology, ensuring safety and
-              convenience, and fostering sustainablesz urban modality
+              convenience, and fostering sustainable urban modality
             </div>
           </div>
         </div>
