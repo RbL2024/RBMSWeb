@@ -37,7 +37,7 @@ export default function AboutUs() {
             <div className="vision-title">VISION</div>
             <div className="vision-body">
               To be the ultimate provider of secure and advanced bike rental
-              solutions, promoting convenient access to eco- friendly
+              solutions, promoting convenient access to eco-friendly
               transportation for all.
             </div>
           </div>
