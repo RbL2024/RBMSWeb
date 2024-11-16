@@ -287,12 +287,13 @@
   }
   @media (max-width: 768px) {
     .faq-left, .faq-right {
-      width: 100%; /* Full width on smaller screens */
+      width:100%; /* Full width on smaller screens */
       margin-left: 0; /* Remove left margin */
       margin-right: 0; /* Remove right margin */
       margin-bottom: 10px; /* Add space between sections */
+      gap: 10;
     } .faq-container {
-        padding: 15px; /* Adjust padding for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
         
       }
     }
@@ -308,10 +309,12 @@
             padding: 0px; /* Adjust padding for smaller screens */
             margin: 5px 0; /* Adjust margin for smaller screens */
            height:100%;
+           width: 40vh;
+       
 
         }
     }
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
         .faq-input {
             padding: 5px; /* Slightly less padding for smaller screens */
 
@@ -321,7 +324,10 @@
           margin-bottom: 15px;
           text-align:justify;
           margin-left: 10px;
-
+          
+          width: 50vw;
+          right: 20%;
+      
          
         }
         .faq-input-question{
@@ -343,9 +349,17 @@
     }  @media (max-width: 768px) {
         .faq-answer {
           max-width: 100%; /* Allow full width on smaller screens */
-          min-height:12vh;
+          min-height:14vh;
           font-size:12px;
+          width: 70vw;
           padding-inline-end: 10px;
+        }
+        .faq-left{
+          width: 100%;
+        }
+        .faq-right{
+          width: 100%;
+          right: 20%;
         }
         
       }

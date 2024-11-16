@@ -1,24 +1,55 @@
-/* .navbar{
-    background-color: #D6D6CA;
-} */
 #offcanvasNavbar-expand-md {
-    background-color: #D6D6CA;
+  background-color: #D6D6CA;
 }
 
+
 .navbar .nav-link.active {
-    text-decoration: underline;
-    text-underline-offset: 5px; /* Adjusts the distance of the underline from the text */
-    text-decoration-thickness: 2px; /* Sets the thickness of the underline */
+  text-decoration: underline;
+  text-underline-offset: 10px; /* Adjusts the distance of the underline from the text */
+  text-decoration-thickness: 2px; /* Sets the thickness of the underline */
+  
+}
+
+.navbar .dropdown-toggle.active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
+.navbar .nav-link:not(.active):hover {
+  text-decoration: none;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  #offcanvasNavbar-expand-md {
+    background-color: #D6D6CA; /* Change to a lighter color for better visibility on mobile */
+    width: 80%;
+    margin-right: 20px;
+    overflow: hidden;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    width: 150vw;
+    
+    
+  }
+
+  .navbar .nav-link,
+  .navbar .dropdown-toggle {
+    font-size: 16px; /* Adjust font size for better readability */
+    margin: 5px 0; /* Add spacing between items */
+  }
+
+  .navbar .nav-link.active {
+    text-underline-offset: 8px; /* Slightly reduce underline offset for smaller screens */
+    text-decoration-thickness: 2px; /* Keep the underline thickness consistent */
   }
 
   .navbar .dropdown-toggle.active {
-    text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 8px;
     text-decoration-thickness: 2px;
   }
-
-  .navbar .nav-link:not(.active):hover {
-    text-decoration: none;
-  }
-
-  
+}

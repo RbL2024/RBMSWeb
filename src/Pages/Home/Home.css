@@ -1,5 +1,5 @@
 #homePage {
-    width: 100dvw;
+
     height: 100dvh;
     background-color: #D6D6CA;
 }
@@ -23,7 +23,7 @@
 
 .homeTitle #LM {
     width: 15vw;
-    height: 4vh;
+    height: 2vh;
     appearance: none;
     border: none;
     outline: none;
@@ -31,7 +31,7 @@
     color: white;
     border-radius: 7px;
     text-decoration: none;
-    padding:  15px;
+    padding:  10px;
 }
 
 
@@ -125,9 +125,11 @@
     .homeTitle {
         position: absolute;
         top: 5%;
-        left: 22%;
-        width: 60vw;
+        width: 70vw;
+        left: 150px;
         display: block;
+        text-align: center;
+        justify-content: center;
         text-align: center;
    
     }
@@ -144,14 +146,14 @@
     }
     
     .homeTitle #LM {
-        width: 30vw;
+        width: 40vw;
         height: 4vh;
         appearance: none;
         border: none;
         outline: none;
         background-color: #355E3B;
         color: white;
-        border-radius: 7px;
+        border-radius: 10px;
     
      
         
@@ -159,8 +161,8 @@
 
     .features {
         position: absolute;
-        bottom: 1%;
-        left: 35px;
+        bottom:1%;
+        left: 20px;;
         text-align: center;
         width: fit-content;
         display: flex;
@@ -169,39 +171,46 @@
        
     }
     .features .feat .fTitle {
-        font-size: 90%;
+        font-size: 100%;
         margin: 0;
+        width: 40vw;
         font-weight: bold;
         margin: 0 10px;
+        left: 20%
       
       
     }
     
     .features .feat #lock {
-        width:15%;
+        width: 11.5%;
+        margin-bottom: 10px;
         
-        height: 30%;
+        height: auto;
     }
     .features .feat #alarm {
-        width: 17.5%;
+        width: 16.5%;
+        margin-top: 5;
+        margin-bottom: 8px;
         height: auto;
     }
     .features .feat #locate {
-        width: 12%;
+        width: 10%;
         height: auto;
+        margin-bottom: 9px;
     }
     .features .feat .fDesc {
-        font-size: 60%;
+        font-size: 70%;
         font-weight: 350;
     }
 
     #hBike {
         position: absolute;
-        width: 70vw;
+        width: 75vw;
+        margin-top: 10px;
         height: auto;
-        bottom:10%;
-        left: 15%;
-        top:35%;
+        bottom:30%;
+        left: 40%;
+        top:30%;
 
         
     }
@@ -209,10 +218,10 @@
     .dlPad {
         position: absolute;
         bottom: 15%;
-     
-        left: 15%;
+        top: 70%;
+        left: 25%;
         background-color: #5F8575;
-        width: 75vw;
+        width: 100vw;
         height: 10vh;
         border-radius: 10px;
       

@@ -29,24 +29,60 @@
     font-size: 25px; /* Font size for bike name */
     text-align: center;
     margin: 0;
-    ;
 }
+.bike-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bike-name span {
+    display: inline-block;
+    padding-left: 100%; /* Start position off-screen */
+    animation: slide-left 10s linear infinite; /* Slide animation */
+  }
+  
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0); /* Start from the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End position off-screen to the left */
+    }
+  }
 
 .bike-info h2 {
     font-size:20px;
     color: gray; /* Color for the subheading */
   
 }
-
 .bike-info p {
-    margin-top: 20px; /* Space above the paragraph */
-    line-height: 1.5; /* Line height for better readability */
-    margin-left: 0px;
+    max-height: 100px; /* Set a fixed height for the description */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 5px; /* Add padding for better UX */
     text-align: justify;
+    
 }
 
+/* Style the scrollbar for Webkit browsers (Chrome, Edge, etc.) */
+.bike-info p::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+.bike-info p::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.bike-info p::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+
+
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .bike-showcase {
         display: flex; /* Use flexbox for layout */
         flex-direction: row;
@@ -57,16 +93,16 @@
 
     .bike-showcase img,
     .bike-info {
-        width: 50%; /* Width of the image */
+        width: 70%; /* Width of the image */
         margin-right: 10px; /* Add some space between image and bike info */
-        text-align: justify;
+        text-align: center;
      
 
     }
 
     .bike-info {
-        width: 50%; /* Ensure bike info takes full width of the remaining space */
-        max-width: 600px;
+        width: 100%; /* Ensure bike info takes full width of the remaining space */
+        max-width: 700px;
         text-align: left; /* Align text to the left for bike info */
         padding: 0; /* Remove padding */
         margin-left: 5px; /* Added margin to separate from image */

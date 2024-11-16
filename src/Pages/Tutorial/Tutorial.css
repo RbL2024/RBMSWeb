@@ -38,22 +38,29 @@
 @media only screen and (max-width: 768px) {
     .ytVid {
         position: absolute;
-        width: 90%;
+        width: 100%;
         top: 10%;
-        left: 5%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        left: 25%;
+      
         
     }
     .ytVid iframe {
         width: 100%;
         height: 25vh;
+      
+        
     }
 
     .steps{
         position: absolute;
         top: 40%;
-        left: 4.5%;
+        left: 25%;
+        justify-content: center;
         width: 90%;
-        height: 55vh;
+        height: 5vh;
     }
     .steps .step-title {
         font-weight: bolder;

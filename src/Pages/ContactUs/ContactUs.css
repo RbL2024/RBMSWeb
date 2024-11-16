@@ -91,64 +91,90 @@
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
+    #contactusPage {
+      
+        right: 50%;
+    }
+    
     .CUTitle p:nth-child(1) {
         font-size: 150%; /* Adjust title font size */
         text-align: center; /* Center text within the container */
-        margin-left: -500px;
+        width: 50vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left:150px;
+
+
     }
 
     .CUTitle p:nth-child(2) {
         font-size: 100%; /* Adjust subtitle font size */
-        margin-left: -500px;
-    }
+        margin-right: 3000px;
+        width: 100vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left:80px;
 
+    }
     #contactusPage {
         display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack title and subtitle vertically */
         align-items: center; /* Center items horizontally */
         padding: 10px; /* Add padding for better spacing */
-       
+        
+        
     }
-
+    
     #contactusPage .cards {
         display: flex; /* Ensure cards are a flex container */
-        flex-direction: row; /* Arrange cards horizontally */
-        align-items: flex-start; /* Align cards to the top */
+        flex-direction: column; /* Arrange cards vertically */
+        align-items: center; /* Center cards horizontally */
         justify-content: center; /* Center cards within the container */
-        width: 100%; /* Use full width for cards */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        width: 180%; /* Use full width for cards */
         margin: 0 auto; /* Center cards */
-        margin-left: -16%;
-        font-size:medium;
-    
-    } 
-
-    #contactusPage .card {
-        width: auto; /* Set width to auto for horizontal layout */
-        height: 300px; /* Adjust height to auto */
-        margin: 1px; /* Margin for spacing around each card */
-        flex: 1; /* Allow cards to grow and fill available space */
-        max-width: 400px; /* Optional: set a max width for each card */
-     
-
+        font-size: medium;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        right: 10%;
+        margin-right: -350px;
+        margin-top: -50px;
+        margin-bottom: 50px;
     }
-
-
+    
+    #contactusPage .card {
+        width: 300vw; /* Adjust cards to fit within the container */
+        height: auto; /* Adjust height automatically */
+        margin: 10px 0; /* Add vertical spacing between cards */
+        flex: none; /* Prevent cards from growing/shrinking */
+        max-width: 400px; /* Optional: set a max width for each card */
+        margin-right: 200px;
+     
+     
+    }
     .map {
         position: absolute;
-        bottom: 10%; /* Adjust bottom position for map */
+        bottom: 5%; /* Adjust bottom position for map */
         left: 1%; /* Adjust left position for map */
         right: 5%; /* Adjust right position for map */
+        width: 77vh;
+        
     }
 
     .map #myMap {
         width: 100%; /* Full width for map on mobile */
         height: auto; /* Maintain aspect ratio */
+        margin-bottom: -20px;
+        margin-left: 124px;
     }
 
     .footer {
         justify-content: end;
         padding: 10px 0; /* Add padding for better spacing */
+        width: 70vh;
+        margin-left: 520px;
+        margin-bottom: -20px;
+        font-size:small;
       
     }
 }

@@ -14,7 +14,7 @@ const BikeShowcase = ({ bike }) => {
         alt={bike.bike_name} // Improved alt text without redundancy
       />
       <div className="bike-info">
-        <h1>{bike.bike_name}</h1> 
+        <h1 className="bike-name"><span>{bike.bike_name}</span></h1> {/* Apply animation to span */}
         <h2>{bike.bike_type}</h2> 
         <p>{bike.bike_desc}</p> 
         <p>Rent Price: ₱{bike.bike_rent_price}</p> {/* Display rent price */}
