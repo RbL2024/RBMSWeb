@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/RBMSWeb/static/css/main.e57d8369.css",
-    "main.js": "/RBMSWeb/static/js/main.c73ef4fb.js",
+    "main.css": "/RBMSWeb/static/css/main.ade561ea.css",
+    "main.js": "/RBMSWeb/static/js/main.5e4fcf95.js",
     "static/media/HBike.png": "/RBMSWeb/static/media/HBike.307f2e252b3520d00124.png",
     "static/media/map.png": "/RBMSWeb/static/media/map.b2e5324e384de634c913.png",
     "static/media/AUBiker.png": "/RBMSWeb/static/media/AUBiker.5631fadf1bdaa54fc6cc.png",
     "static/media/AUBike.png": "/RBMSWeb/static/media/AUBike.ddefcd0123571227d8d0.png",
     "static/media/FAQ.png": "/RBMSWeb/static/media/FAQ.cba8e719f26529f8b47a.png",
     "index.html": "/RBMSWeb/index.html",
-    "main.e57d8369.css.map": "/RBMSWeb/static/css/main.e57d8369.css.map",
-    "main.c73ef4fb.js.map": "/RBMSWeb/static/js/main.c73ef4fb.js.map"
+    "main.ade561ea.css.map": "/RBMSWeb/static/css/main.ade561ea.css.map",
+    "main.5e4fcf95.js.map": "/RBMSWeb/static/js/main.5e4fcf95.js.map"
   },
   "entrypoints": [
-    "static/css/main.e57d8369.css",
-    "static/js/main.c73ef4fb.js"
+    "static/css/main.ade561ea.css",
+    "static/js/main.5e4fcf95.js"
   ]
 }
