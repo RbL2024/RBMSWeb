@@ -17,7 +17,7 @@ export default function AboutUs() {
           <div className="greet">
             <div className="greet-title">WELCOME TO RBMS!</div>
             <div className="greet-body">
-              We created “RBMS” to provide a hassle-free and enjoyable
+              We created “RBMS” to provide a hassle-free ands enjoyable
               experience for users. Whether booking online or walking in, our
               system is designed to make the rental process smooth and easy.
               We've prioritized both bike security and user safety by
