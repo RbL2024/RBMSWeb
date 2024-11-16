@@ -163,17 +163,26 @@
 
     .map #myMap {
         width: 100%; /* Full width for map on mobile */
-        height: auto; /* Maintain aspect ratio */
+        height: 20vh; /* Maintain aspect ratio */
         margin-bottom: -20px;
-        margin-left: 124px;
+        justify-content: center;
+        align-self: center;
+        position:relative;
+        margin-left: 120px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        display: none;
     }
 
     .footer {
         justify-content: end;
         padding: 10px 0; /* Add padding for better spacing */
-        width: 70vh;
-        margin-left: 520px;
-        margin-bottom: -20px;
+        width: 150%;
+        left: 50%;
+        right: 50%;
+        margin-top: 30px;
+        margin-bottom: -30px;
         font-size:small;
       
     }
