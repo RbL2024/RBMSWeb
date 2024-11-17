@@ -5,6 +5,7 @@ import lockImg from "./lock.png";
 import alarmImg from "./alarm.png";
 import locateImg from "./locate.png";
 
+import { IoMdDownload } from "react-icons/io";
 export default function Home() {
   // Loading state to manage spinner visibility
   const [isLoading, setIsLoading] = useState(false);
@@ -80,7 +81,9 @@ export default function Home() {
             ) : (
               <>
                 <p>WANT TO RESERVE?</p>
-                <p>DOWNLOAD THE APP</p>
+                <p>
+                  DOWNLOAD THE APP <IoMdDownload className="downloadIcon" />
+                </p>
               </>
             )}
           </button>

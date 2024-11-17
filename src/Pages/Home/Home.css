@@ -142,7 +142,18 @@
     background-color: #ccc; /* Make the button look disabled */
     cursor: not-allowed; /* Show "not-allowed" cursor */
   }
-
+  .downloadIcon {
+    margin-left: 8px; /* Space between the text and icon */
+    vertical-align: top; /* Aligns the icon to the top of the text */
+    font-size: 1.2rem; /* Adjust the icon size */
+    color: #ffffff; /* Customize the color (optional) */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .downloadIcon:hover {
+    transform: translateY(-2px); /* Slightly lift the icon on hover */
+    
+  }
 
 
 @media only screen and (max-width: 768px) {
