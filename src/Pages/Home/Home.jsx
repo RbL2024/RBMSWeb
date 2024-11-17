@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import HBike from "./HBike.png";
 import lockImg from "./lock.png";
@@ -6,49 +6,44 @@ import alarmImg from "./alarm.png";
 import locateImg from "./locate.png";
 
 export default function Home() {
+  // Loading state to manage spinner visibility
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Function to handle download and show loading spinner
   const handleDownload = () => {
-    // Create a temporary link element
-    const link = document.createElement('a');
+    // Start loading state
+    setIsLoading(true);
 
-    // Set the href attribute to the image URL (use a root-relative path)
-    link.href = `${process.env.PUBLIC_URL}/website-example.zip`; // Ensure the file is in the public directory
-    link.download = 'website-example.zip'; // Specify the filename for the downloaded file
+    // Simulate download action
+    setTimeout(() => {
+      // Create a temporary link element
+      const link = document.createElement('a');
 
-    // Append the link to the body (required for Firefox)
-    document.body.appendChild(link);
+      // Set the href attribute to the file URL (root-relative path)
+      link.href = `${process.env.PUBLIC_URL}/website-example.zip`; // Ensure the file is in the public directory
+      link.download = 'website-example.zip'; // Specify the filename
 
-    // Programmatically click the link to trigger the download
-    link.click();
+      // Append the link to the document body (required for Firefox)
+      document.body.appendChild(link);
 
-    // Remove the link from the document
-    document.body.removeChild(link);
+      // Programmatically click the link to start the download
+      link.click();
+
+      // Remove the link after the download starts
+      document.body.removeChild(link);
+
+      // End loading state after download is triggered
+      setIsLoading(false);
+    }, 1500); // Simulate a 1.5s delay for the "download" action
   };
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const [bikeImgStyle, setBikeImgStyle] = useState({});
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollPosition(window.scrollY);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const newXPosition = scrollPosition * 1.5; // adjust the speed of the movement
-  //   const newYPosition = scrollPosition * 1; // adjust the speed of the movement
-  //   setBikeImgStyle({transform: `translate(${newXPosition}px, ${newYPosition}px)` });
-    
-  // }, [scrollPosition]);
   return (
     <div id="homePage">
       <div className="homeTitle">
         <p>RBMS</p>
         <p>EXPLORE WITH EASE AND ENJOY YOUR RIDE</p>
         <a href="#tutorialPage" id="LM" className="button">
-        Learn More
+          Learn More
         </a>
       </div>
       <div className="features">
@@ -75,14 +70,20 @@ export default function Home() {
         </div>
       </div>
       <div className="hbike">
-        <img id="hBike" src={HBike} alt="bike" /*style={bikeImgStyle}*//>
+        <img id="hBike" src={HBike} alt="bike" />
       </div>
       <div className="dlPad">
         <div className="dlButtonCon">
-        <button type="button" id="btnDL" onClick={handleDownload}>
-        <p>WANT TO RESERVE?</p>
-        <p>DOWNLOAD THE APP</p>
-        </button>
+          <button type="button" id="btnDL" onClick={handleDownload} disabled={isLoading}>
+            {isLoading ? (
+              <div className="spinner"></div> // Show loading spinner
+            ) : (
+              <>
+                <p>WANT TO RESERVE?</p>
+                <p>DOWNLOAD THE APP</p>
+              </>
+            )}
+          </button>
         </div>
       </div>
     </div>
