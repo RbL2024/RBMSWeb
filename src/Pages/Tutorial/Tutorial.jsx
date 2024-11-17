@@ -7,7 +7,6 @@ export default function Tutorial() {
       <div className="ytVid">
         <iframe
          src="https://www.youtube.com/embed/o7euy4WngC8?si=nSMDfiin7skbAyKw"
-          frameborder="0"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
