@@ -6,7 +6,8 @@ export default function Tutorial() {
     <div id="tutorialPage">
       <div className="ytVid">
         <iframe
-          src="https://www.youtube.com/embed/QHaqqu1kng8" // Corrected to the YouTube embed URL
+         src="https://www.youtube.com/embed/o7euy4WngC8?si=nSMDfiin7skbAyKw"
+          frameborder="0"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
