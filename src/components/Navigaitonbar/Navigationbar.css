@@ -6,7 +6,7 @@
 .navbar .nav-link.active {
   text-decoration: underline;
   text-underline-offset: 10px; /* Adjusts the distance of the underline from the text */
-  text-decoration-thickness: 2px; /* Sets the thickness of the underline */
+  text-decoration-thickness:2px; /* Sets the thickness of the underline */
   
 }
 
