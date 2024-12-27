@@ -136,8 +136,9 @@
         margin: 0 auto; /* Center cards */
         font-size: medium;
         overflow-x: hidden; /* Prevent horizontal scrolling */
-        right: 10%;
-        margin-right: -350px;
+   
+      
+        margin-left:-20px;
         margin-top: -50px;
         margin-bottom: 50px;
     }

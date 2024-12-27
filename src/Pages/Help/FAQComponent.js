@@ -119,7 +119,7 @@ const FAQComponent = () => {
   return (
     <div className="faq-container">
       <div className="faq-left">
-        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <h2>FREQUENTLY ASKED QUESTIONS / FEEDBACK</h2>
         <ul>
           {questions.map((q, index) => (
             <li key={index} className="faq-item">
@@ -134,7 +134,7 @@ const FAQComponent = () => {
       </div>
       <div className="faq-right">
         <img src={faqImage} alt="Any Questions?" className="faq-image" />
-        <h3>Any Questions?</h3>
+        <h3>Any Questions or Suggestions?</h3>
         <p>
           For any questions or concerns about our website, please contact us at our official email address. We will respond to your email as soon as possible.
         </p>
@@ -149,7 +149,7 @@ const FAQComponent = () => {
           />
           <input
             type="text"
-            placeholder="Ask your question here..."
+            placeholder="Ask your questions/suggestions here..."
             value={newQuestion}
             onChange={(e) => setNewQuestion(e.target.value)}
             className="faq-input-question"
