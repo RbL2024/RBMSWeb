@@ -119,7 +119,7 @@ const FAQComponent = () => {
   return (
     <div className="faq-container">
       <div className="faq-left">
-        <h2>FREQUENTLY ASKED QUESTIONS / FEEDBACK</h2>
+        <h2>FAQ's / FEEDBACK</h2>
         <ul>
           {questions.map((q, index) => (
             <li key={index} className="faq-item">
