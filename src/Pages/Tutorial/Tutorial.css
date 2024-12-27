@@ -32,7 +32,19 @@
 .steps .step-body .step-tuts .stepNum {
     font-weight: bold;
 }
-
+.video-link {
+    background: none;
+    border: none;
+    color: #1e90ff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+  }
+  
+  .video-link:hover {
+    color: #104e8b;
+  }
 
 
 @media only screen and (max-width: 768px) {
