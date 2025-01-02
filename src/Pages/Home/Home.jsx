@@ -10,33 +10,34 @@ export default function Home() {
   // Loading state to manage spinner visibility
   const [isLoading, setIsLoading] = useState(false);
 
-  // Function to handle download and show loading spinner
-  const handleDownload = () => {
-    // Start loading state
-    setIsLoading(true);
+ // Function to handle download and show loading spinner
+ const handleDownload = () => {
+  // Start loading state
+  setIsLoading(true);
 
-    // Simulate download action
-    setTimeout(() => {
-      // Create a temporary link element
-      const link = document.createElement('a');
+  // Simulate download action
+  setTimeout(() => {
+    // Create a temporary link element
+    const link = document.createElement('a');
 
-      // Set the href attribute to the file URL (root-relative path)
-      link.href = `${process.env.PUBLIC_URL}/website-example.zip`; // Ensure the file is in the public directory
-      link.download = 'website-example.zip'; // Specify the filename
+    // Set the href attribute to the provided APK URL
+    link.href = 'https://github.com/RbL2024/RBMSAndroid/releases/download/RBMS/rbms.apk';
+    link.download = 'rbms.apk'; // Specify the filename
 
-      // Append the link to the document body (required for Firefox)
-      document.body.appendChild(link);
+    // Append the link to the document body (required for Firefox)
+    document.body.appendChild(link);
 
-      // Programmatically click the link to start the download
-      link.click();
+    // Programmatically click the link to start the download
+    link.click();
 
-      // Remove the link after the download starts
-      document.body.removeChild(link);
+    // Remove the link after the download starts
+    document.body.removeChild(link);
 
-      // End loading state after download is triggered
-      setIsLoading(false);
-    }, 1500); // Simulate a 1.5s delay for the "download" action
-  };
+    // End loading state after download is triggered
+    setIsLoading(false);
+  }, 1500); // Simulate a 1.5s delay for the "download" action
+};
+
 
   return (
     <div id="homePage">
