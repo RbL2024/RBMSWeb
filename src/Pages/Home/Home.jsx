@@ -4,23 +4,19 @@ import HBike from "./HBike.png";
 import lockImg from "./lock.png";
 import alarmImg from "./alarm.png";
 import locateImg from "./locate.png";
-
 import { IoMdDownload } from "react-icons/io";
+
 export default function Home() {
-  // Loading state to manage spinner visibility
-  const [isLoading, setIsLoading] = useState(false);
+  // State for triggering animation
+  const [isAnimating, setIsAnimating] = useState(false);
 
- // Function to handle download and show loading spinner
- const handleDownload = () => {
-  // Start loading state
-  setIsLoading(true);
+  // Function to handle download and animation
+  const handleDownload = () => {
+    // Trigger pulse animation
+    setIsAnimating(true);
 
-  // Simulate download action
-  setTimeout(() => {
-    // Create a temporary link element
+    // Create a temporary link element for download
     const link = document.createElement('a');
-
-    // Set the href attribute to the provided APK URL
     link.href = 'https://github.com/RbL2024/RBMSAndroid/releases/download/RBMS/rbms.apk';
     link.download = 'rbms.apk'; // Specify the filename
 
@@ -33,11 +29,9 @@ export default function Home() {
     // Remove the link after the download starts
     document.body.removeChild(link);
 
-    // End loading state after download is triggered
-    setIsLoading(false);
-  }, 1500); // Simulate a 1.5s delay for the "download" action
-};
-
+    // Reset animation state after animation duration
+    setTimeout(() => setIsAnimating(false), 1000); // Reset after pulse animation ends
+  };
 
   return (
     <div id="homePage">
@@ -76,17 +70,16 @@ export default function Home() {
       </div>
       <div className="dlPad">
         <div className="dlButtonCon">
-          <button type="button" id="btnDL" onClick={handleDownload} disabled={isLoading}>
-            {isLoading ? (
-              <div className="spinner"></div> // Show loading spinner
-            ) : (
-              <>
-                <p>WANT TO RESERVE?</p>
-                <p>
-                  DOWNLOAD THE APP <IoMdDownload className="downloadIcon" />
-                </p>
-              </>
-            )}
+          <button type="button" id="btnDL" onClick={handleDownload}>
+            <p>WANT TO RESERVE?</p>
+            <p>
+              DOWNLOAD THE APP
+              <div className="downloadIconWrapper">
+                <IoMdDownload 
+                  className={`downloadIcon ${isAnimating ? "pulseColor" : ""}`} 
+                />
+              </div>
+            </p>
           </button>
         </div>
       </div>
