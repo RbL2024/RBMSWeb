@@ -76,7 +76,7 @@ export default function Home() {
               DOWNLOAD THE APP
               <div className="downloadIconWrapper">
                 <IoMdDownload 
-                  className={`downloadIcon ${isAnimating ? "pulseColor" : ""}`} 
+                  className={`downloadIcon ${isAnimating ? "upDown" : ""}`} 
                 />
               </div>
             </p>
