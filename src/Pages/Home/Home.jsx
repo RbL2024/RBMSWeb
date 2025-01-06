@@ -17,7 +17,7 @@ export default function Home() {
 
     // Create a temporary link element for download
     const link = document.createElement('a');
-    link.href = 'https://rbms2024.vercel.app/RBMS.apk';
+    link.href = 'RBMS.apk';
     link.download = 'RBMS.apk'; // Specify the filename
 
     // Append the link to the document body (required for Firefox)
