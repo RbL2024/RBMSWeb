@@ -17,7 +17,7 @@ export default function Home() {
 
     // Create a temporary link element for download
     const link = document.createElement('a');
-    link.href = 'https://github.com/RbL2024/RBMSAndroid/releases/download/RBMS/rbms.apk';
+    link.href = 'https://github.com/RbL2024/RBMSAndroid/releases/download/v2/RBMS.apk';
     link.download = 'rbms.apk'; // Specify the filename
 
     // Append the link to the document body (required for Firefox)
